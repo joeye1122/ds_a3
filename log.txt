@@ -138,3 +138,189 @@ PaxosBroadcastServer started on port 10000
 /127.0.0.1Broadcast message: 1/2/Decision/9007
 /127.0.0.1Broadcast message: 1/2/Decision/9008
 /127.0.0.1Broadcast message: 1/2/Decision/9002
+PaxosBroadcastServer started on port 10000
+m3 recive promise
+m1 recive promise
+m2 recive promise
+m7 recive promise
+/127.0.0.1Broadcast message: 1/2/PrepareRequest/9001
+m5 recive promise
+/127.0.0.1Broadcast message: 2/3/PrepareRequest/9002
+/127.0.0.1Broadcast message: 0/1/PrepareRequest/9000
+m6 recive promise
+m4 recive promise
+m9 recive promise
+m8 recive promise
+m1 send decision
+/127.0.0.1Broadcast message: 1/2/AcceptRequest/9002
+/127.0.0.1Broadcast message: 1/2/AcceptRequest/9001
+m2 send decision
+m5 send decision
+m4 send decision
+m6 send decision
+/127.0.0.1Broadcast message: 1/2/Decision/9000
+m8 send decision
+/127.0.0.1Broadcast message: 1/2/Decision/9001
+m7 send decision
+m4 send decision
+m9 send decision
+/127.0.0.1Broadcast message: 1/2/Decision/9005
+/127.0.0.1Broadcast message: 1/2/Decision/9004
+/127.0.0.1Broadcast message: 1/2/Decision/9003
+m2 send decision
+m6 send decision
+m1 send decision
+/127.0.0.1Broadcast message: 1/2/Decision/9007
+m5 send decision
+m7 send decision
+/127.0.0.1Broadcast message: 1/2/Decision/9006
+m3 send decision
+m8 send decision
+/127.0.0.1Broadcast message: 1/2/Decision/9003
+/127.0.0.1Broadcast message: 1/2/Decision/9008
+/127.0.0.1Broadcast message: 1/2/Decision/9005
+/127.0.0.1Broadcast message: 1/2/Decision/9001
+/127.0.0.1Broadcast message: 1/2/Decision/9000
+/127.0.0.1Broadcast message: 1/2/Decision/9006
+/127.0.0.1Broadcast message: 1/2/Decision/9004
+/127.0.0.1Broadcast message: 1/2/Decision/9002
+/127.0.0.1Broadcast message: 1/2/Decision/9007
+m9 send decision
+m3 send decision
+/127.0.0.1Broadcast message: 1/2/Decision/9008
+/127.0.0.1Broadcast message: 1/2/Decision/9002
+m4 Value 2 accepted by m4
+m5 Value 2 accepted by m5
+m1 Value 2 accepted by m1
+m5 Value 2 accepted by m5
+m6 Value 2 accepted by m6
+m7 Value 2 accepted by m7
+m5 Value 2 accepted by m5
+m2 Value 2 accepted by m2
+m8 Value 2 accepted by m8
+m1 Value 2 accepted by m1
+m7 Value 2 accepted by m7
+m4 Value 2 accepted by m4
+m6 Value 2 accepted by m6
+m5 Value 2 accepted by m5
+m2 Value 2 accepted by m2
+m8 Value 2 accepted by m8
+m3 Value 2 accepted by m3
+m1 Value 2 accepted by m1
+m5 Value 2 accepted by m5
+m4 Value 2 accepted by m4
+m7 Value 2 accepted by m7
+m9 Value 2 accepted by m9
+m6 Value 2 accepted by m6
+m2 Value 2 accepted by m2
+m8 Value 2 accepted by m8
+m3 Value 2 accepted by m3
+m6 Value 2 accepted by m6
+m4 Value 2 accepted by m4
+m7 Value 2 accepted by m7
+m1 Value 2 accepted by m1
+m9 Value 2 accepted by m9
+m2 Value 2 accepted by m2
+m5 Value 2 accepted by m5
+m8 Value 2 accepted by m8
+m3 Value 2 accepted by m3
+m4 Value 2 accepted by m4
+m6 Value 2 accepted by m6
+m1 Value 2 accepted by m1
+m7 Value 2 accepted by m7
+m2 Value 2 accepted by m2
+m9 Value 2 accepted by m9
+m8 Value 2 accepted by m8
+m5 Value 2 accepted by m5
+m3 Value 2 accepted by m3
+m1 Value 2 accepted by m1
+m4 Value 2 accepted by m4
+m6 Value 2 accepted by m6
+m7 Value 2 accepted by m7
+m2 Value 2 accepted by m2
+m9 Value 2 accepted by m9
+m8 Value 2 accepted by m8
+m5 Value 2 accepted by m5
+m3 Value 2 accepted by m3
+m1 Value 2 accepted by m1
+m4 Value 2 accepted by m4
+m6 Value 2 accepted by m6
+m7 Value 2 accepted by m7
+m2 Value 2 accepted by m2
+m9 Value 2 accepted by m9
+m8 Value 2 accepted by m8
+m5 Value 2 accepted by m5
+m3 Value 2 accepted by m3
+m4 Value 2 accepted by m4
+m1 Value 2 accepted by m1
+m6 Value 2 accepted by m6
+m7 Value 2 accepted by m7
+m2 Value 2 accepted by m2
+m9 Value 2 accepted by m9
+m8 Value 2 accepted by m8
+m5 Value 2 accepted by m5
+m3 Value 2 accepted by m3
+m4 Value 2 accepted by m4
+m1 Value 2 accepted by m1
+m6 Value 2 accepted by m6
+m7 Value 2 accepted by m7
+m2 Value 2 accepted by m2
+m9 Value 2 accepted by m9
+m5 Value 2 accepted by m5
+m8 Value 2 accepted by m8
+m3 Value 2 accepted by m3
+m4 Value 2 accepted by m4
+m1 Value 2 accepted by m1
+m6 Value 2 accepted by m6
+m7 Value 2 accepted by m7
+m2 Value 2 accepted by m2
+m9 Value 2 accepted by m9
+m5 Value 2 accepted by m5
+m8 Value 2 accepted by m8
+m3 Value 2 accepted by m3
+m4 Value 2 accepted by m4
+m1 Value 2 accepted by m1
+m6 Value 2 accepted by m6
+m7 Value 2 accepted by m7
+m9 Value 2 accepted by m9
+m2 Value 2 accepted by m2
+m5 Value 2 accepted by m5
+m8 Value 2 accepted by m8
+m3 Value 2 accepted by m3
+m4 Value 2 accepted by m4
+m1 Value 2 accepted by m1
+m6 Value 2 accepted by m6
+m2 Value 2 accepted by m2
+m7 Value 2 accepted by m7
+m9 Value 2 accepted by m9
+m5 Value 2 accepted by m5
+m8 Value 2 accepted by m8
+m7 Value 2 accepted by m7
+m5 Value 2 accepted by m5
+m1 Value 2 accepted by m1
+m6 Value 2 accepted by m6
+m9 Value 2 accepted by m9
+m3 Value 2 accepted by m3
+m2 Value 2 accepted by m2
+m4 Value 2 accepted by m4
+m1 Value 2 accepted by m1
+m6 Value 2 accepted by m6
+m8 Value 2 accepted by m8
+m7 Value 2 accepted by m7
+m9 Value 2 accepted by m9
+m9 Value 2 accepted by m9
+m1 Value 2 accepted by m1
+m4 Value 2 accepted by m4
+m8 Value 2 accepted by m8
+m7 Value 2 accepted by m7
+m3 Value 2 accepted by m3
+m6 Value 2 accepted by m6
+m2 Value 2 accepted by m2
+m9 Value 2 accepted by m9
+m4 Value 2 accepted by m4
+m8 Value 2 accepted by m8
+m3 Value 2 accepted by m3
+m2 Value 2 accepted by m2
+m9 Value 2 accepted by m9
+m3 Value 2 accepted by m3
+m3 Value 2 accepted by m3

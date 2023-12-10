@@ -58,7 +58,6 @@ public class PaxosParticipant {
 
             while (true) {
                 Socket clientSocket = serverSocket.accept();
-                // System.out.println("New connection accepted from " + clientSocket.getInetAddress());
 
                 // Simulate a delay
                 try {
@@ -73,7 +72,7 @@ public class PaxosParticipant {
                         InputStream inputStream = clientSocket.getInputStream();
                         BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream));
                         String message = reader.readLine();
-                        System.out.println("Received message: " + message);
+                        System.out.println("m"+id+" Received message: " + message);
 
                         // Process the message and perform the necessary actions
                         Proposal reciveProposal = Utils.fromString(message);
@@ -114,7 +113,8 @@ public class PaxosParticipant {
         if(accepterCurrentProposal == null){
             accepterCurrentProposal = reciveProposal;
             //promise
-            respondProposal = new Proposal(-1,-1,"ResponseToPrepareRequest",port);            
+            respondProposal = new Proposal(-1,-1,"ResponseToPrepareRequest",port); 
+            Utils.log("m"+id+" recive promise");           
         }
 
         //this is a new proposal
@@ -193,7 +193,7 @@ public class PaxosParticipant {
             PrintWriter writer = new PrintWriter(outputStream);
 
             Proposal decisionProposal = new Proposal(reciveProposal.getProposalNumber(),reciveProposal.getProposalValue(),"Decision",port);
-
+            Utils.log("m"+id+" send decision");
             writer.println(decisionProposal.toString());
             writer.flush();
 
@@ -225,6 +225,8 @@ public class PaxosParticipant {
             if (count >=  PaxosBroadcastServer.MAX_MEMBER_COUNT / 2) {
                 // Value accepted by majority, take action here
                 System.out.println("Value " + proposal.getProposalValue() + " accepted by " + "m"+id);
+                Utils.log("m"+id+" Value " + proposal.getProposalValue() + " accepted by " + "m"+id);
+
             }
         }
     }

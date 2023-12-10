@@ -53,7 +53,7 @@ public class PaxosBroadcastServer {
             BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream));
             String message = reader.readLine();
 
-            System.out.println("Received message: " + message + " from " + clientSocket.getInetAddress());
+            System.out.println("Received message: " + message +  " boardcast to all ports");
 
             // Broadcast the message to all ports
             broadcastProposal(message);

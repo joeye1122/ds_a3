@@ -1,11 +1,17 @@
 import java.io.BufferedReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.io.PrintWriter;
 import java.net.ServerSocket;
 import java.net.Socket;
 
 public class LogServer {
-    public static void main(String[] args) {
+
+    public LogServer() {
+
+    }
+    public void startServer(){
         int port = 10001;
         try (ServerSocket serverSocket = new ServerSocket(port)) {
             System.out.println("Log Server started on port " + port);
@@ -18,7 +24,8 @@ public class LogServer {
                         String logMessage;
 
                         while ((logMessage = reader.readLine()) != null) {
-                            System.out.println(logMessage);
+                            System.out.println("Log: " + logMessage);
+                            writeToFile(logMessage);
                         }
 
                         reader.close();
@@ -33,5 +40,18 @@ public class LogServer {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    private static void writeToFile(String logMessage) {
+        try (PrintWriter writer = new PrintWriter(new FileWriter("log.txt", true))) {
+            writer.println(logMessage);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void main(String[] args) {
+        LogServer server = new LogServer();
+        server.startServer();
     }
 }

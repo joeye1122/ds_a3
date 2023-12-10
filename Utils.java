@@ -6,8 +6,6 @@ import java.util.Map;
 
 
 public class Utils {
-    public static final int MAX_MEMBER_COUNT = 3;
-
 
     public static void log(String message) {
 

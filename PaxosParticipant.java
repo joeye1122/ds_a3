@@ -1,7 +1,4 @@
 import java.io.*;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.*;
@@ -18,11 +15,14 @@ public class PaxosParticipant {
     private List<Proposal> proposerPromises;
     private boolean isProposalPhasetwo;
     private Map<Proposal, Integer> learnerDecision;
+    private int delay;
 
 
-    public PaxosParticipant(int id, int port) {
+    public PaxosParticipant(int id, int port, int delay) {
         this.id = id;
         this.port = port;
+        this.delay = delay;
+
         memberName = "m" + Integer.toString(id);
         proposerPromises = new ArrayList<>();
         learnerDecision = new HashMap<>();
@@ -38,7 +38,6 @@ public class PaxosParticipant {
 
             String vString = ProcessHandle.current().pid() + memberName;
 
-            //TODO: v = id
             Proposal proposal = new Proposal(Utils.convertStringToInt(vString), id, "PrepareRequest", port);
 
             writer.println(proposal.toString());
@@ -59,7 +58,14 @@ public class PaxosParticipant {
 
             while (true) {
                 Socket clientSocket = serverSocket.accept();
-                System.out.println("New connection accepted from " + clientSocket.getInetAddress());
+                // System.out.println("New connection accepted from " + clientSocket.getInetAddress());
+
+                // Simulate a delay
+                try {
+                    Thread.sleep(delay);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
 
                 // Create a new thread to handle the client request
                 Thread thread = new Thread(() -> {
@@ -137,13 +143,16 @@ public class PaxosParticipant {
     }
 
     private synchronized void proposerAcceptRequest(Proposal reciveProposal){
-        proposerPromises.add(reciveProposal);
+        if (reciveProposal.getProposalNumber() != -1) {
+            proposerPromises.add(reciveProposal);
+        }
+        
         proposalPromisedCount++;
 
-        if(isProposalPhasetwo == false && proposalPromisedCount >= Utils.MAX_MEMBER_COUNT/2){
+        if(isProposalPhasetwo == false && proposalPromisedCount >= PaxosBroadcastServer.MAX_MEMBER_COUNT/2){
             isProposalPhasetwo = true;
-            int maxProposalNumber = -2;
-            int maxProposalValue = -2 ;
+            int maxProposalNumber = -100;
+            int maxProposalValue = -100;
 
             if(proposerPromises.size() == 0){
                 maxProposalNumber = Utils.convertStringToInt(ProcessHandle.current().pid() + memberName);
@@ -198,58 +207,53 @@ public class PaxosParticipant {
 
 
     private void learnerListenDecision(Proposal receiveProposal) {
-        int proposalKey = 0;
-
-        if (learnerDecision.containsKey(receiveProposal)) {
-            proposalKey = learnerDecision.get(receiveProposal) + 1;
+        boolean isValueAccepted = false;
+        for (Proposal proposal : learnerDecision.keySet()) {
+            if (proposal.getProposalValue() == receiveProposal.getProposalValue()) {
+                int count = learnerDecision.get(proposal);
+                learnerDecision.put(proposal, count + 1);
+                isValueAccepted = true;
+                break;
+            }
+        }
+        if (!isValueAccepted) {
+            learnerDecision.put(receiveProposal, 1);
         }
 
-        learnerDecision.put(receiveProposal, proposalKey);
-
-        // Check if any proposal's occurrence exceeds the majority
-        for (Map.Entry<Proposal, Integer> entry : learnerDecision.entrySet()) {
-            if (entry.getValue() > Utils.MAX_MEMBER_COUNT / 2) {
-                System.out.println("Proposal " + entry.getKey() + " has occurred more than the majority.");
+        for (Proposal proposal : learnerDecision.keySet()) {
+            int count = learnerDecision.get(proposal);
+            if (count >=  PaxosBroadcastServer.MAX_MEMBER_COUNT / 2) {
+                // Value accepted by majority, take action here
+                System.out.println("Value " + proposal.getProposalValue() + " accepted by " + "m"+id);
             }
         }
     }
 
-    
+    public int getId() {
+        return id;
+    }
+
 
     public static void main(String[] args) {
+        if (args.length != 3) {
+            System.out.println("Usage: java PaxosParticipant [id] [portnumber] [delay]");
+            return;
+        }
 
+        int id = Integer.parseInt(args[0]);
+        int portNumber = Integer.parseInt(args[1]);
+        int delay = Integer.parseInt(args[2]);
+
+        PaxosParticipant participant = new PaxosParticipant(id, portNumber, delay);
+        
         Thread testThread = new Thread(() -> {
-            try (ServerSocket testServerSocket = new ServerSocket(9000)) {
-                System.out.println("Test Socket server started on port 9000");
-
-                while (true) {
-                    Socket testClientSocket = testServerSocket.accept();
-                    System.out.println("Test: New connection accepted from " + testClientSocket.getInetAddress());
-
-                    InputStream testInputStream = testClientSocket.getInputStream();
-                    BufferedReader testReader = new BufferedReader(new InputStreamReader(testInputStream));
-                    String testMessage = testReader.readLine();
-                    System.out.println("Test: Received message: " + testMessage);
-
-                    testReader.close();
-                    testInputStream.close();
-                    testClientSocket.close();
-                }
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
+            participant.startListening();
         });
         testThread.start();
 
-        PaxosParticipant participant = new PaxosParticipant(1, 9010);
-
-        Thread participantThread = new Thread(() -> {
-            participant.startListening();
-        });
-
-        participantThread.start();
-        participant.prepareRequest();
+        if(id <= 3){
+            participant.prepareRequest();
+        }
     }
 }
-
 

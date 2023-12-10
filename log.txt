@@ -1,0 +1,140 @@
+/127.0.0.1Broadcast message: 0/1/PrepareRequest/0
+PaxosBroadcastServer started on port 10000
+/127.0.0.1Broadcast message: 0/1/PrepareRequest/0
+PaxosBroadcastServer started on port 10000
+/127.0.0.1Broadcast message: 0/1/PrepareRequest/0
+/127.0.0.1Broadcast message: 1/2/PrepareRequest/0
+/127.0.0.1Broadcast message: 2/3/PrepareRequest/0
+PaxosBroadcastServer started on port 10000
+PaxosBroadcastServer started on port 10000
+/127.0.0.1Broadcast message: 2/3/PrepareRequest/9002
+/127.0.0.1Broadcast message: 1/2/PrepareRequest/9001
+/127.0.0.1Broadcast message: 0/1/PrepareRequest/9000
+PaxosBroadcastServer started on port 10000
+PaxosBroadcastServer started on port 10000
+/127.0.0.1Broadcast message: 0/1/PrepareRequest/9000
+/127.0.0.1Broadcast message: 1/2/PrepareRequest/9001
+/127.0.0.1Broadcast message: 2/3/PrepareRequest/9002
+PaxosBroadcastServer started on port 10000
+/127.0.0.1Broadcast message: 0/1/PrepareRequest/9000
+/127.0.0.1Broadcast message: 2/3/PrepareRequest/9002
+/127.0.0.1Broadcast message: 1/2/PrepareRequest/9001
+PaxosBroadcastServer started on port 10000
+/127.0.0.1Broadcast message: 0/1/PrepareRequest/9000
+PaxosBroadcastServer started on port 10000
+/127.0.0.1Broadcast message: 0/1/PrepareRequest/9000
+PaxosBroadcastServer started on port 10000
+/127.0.0.1Broadcast message: 0/1/PrepareRequest/9000
+PaxosBroadcastServer started on port 10000
+/127.0.0.1Broadcast message: 0/1/PrepareRequest/9000
+PaxosBroadcastServer started on port 10000
+/127.0.0.1Broadcast message: 0/1/PrepareRequest/9000
+PaxosBroadcastServer started on port 10000
+/127.0.0.1Broadcast message: 0/1/PrepareRequest/9000
+PaxosBroadcastServer started on port 10000
+/127.0.0.1Broadcast message: 0/1/PrepareRequest/9000
+PaxosBroadcastServer started on port 10000
+PaxosBroadcastServer started on port 10000
+PaxosBroadcastServer started on port 10000
+PaxosBroadcastServer started on port 10000
+PaxosBroadcastServer started on port 10000
+/127.0.0.1Broadcast message: 0/1/PrepareRequest/9000
+/127.0.0.1Broadcast message: -1/-1/AcceptRequest/9000
+/127.0.0.1Broadcast message: -1/-1/Decision/9000
+/127.0.0.1Broadcast message: -1/-1/Decision/9001
+PaxosBroadcastServer started on port 10000
+/127.0.0.1Broadcast message: 0/1/PrepareRequest/9000
+/127.0.0.1Broadcast message: -1/-1/AcceptRequest/9000
+/127.0.0.1Broadcast message: -1/-1/Decision/9000
+/127.0.0.1Broadcast message: -1/-1/Decision/9001
+PaxosBroadcastServer started on port 10000
+/127.0.0.1Broadcast message: 0/1/PrepareRequest/9000
+/127.0.0.1Broadcast message: -1/-1/AcceptRequest/9000
+/127.0.0.1Broadcast message: -1/-1/Decision/9001
+/127.0.0.1Broadcast message: -1/-1/Decision/9000
+PaxosBroadcastServer started on port 10000
+/127.0.0.1Broadcast message: 0/1/PrepareRequest/9000
+/127.0.0.1Broadcast message: 0/1/AcceptRequest/9000
+/127.0.0.1Broadcast message: 0/1/Decision/9000
+/127.0.0.1Broadcast message: 0/1/Decision/9001
+PaxosBroadcastServer started on port 10000
+/127.0.0.1Broadcast message: 0/1/PrepareRequest/9000
+/127.0.0.1Broadcast message: 0/1/AcceptRequest/9000
+/127.0.0.1Broadcast message: 0/1/Decision/9001
+/127.0.0.1Broadcast message: 0/1/Decision/9000
+/127.0.0.1Broadcast message: 0/1/Decision/9002
+PaxosBroadcastServer started on port 10000
+/127.0.0.1Broadcast message: 2/3/PrepareRequest/9002
+/127.0.0.1Broadcast message: 1/2/PrepareRequest/9001
+/127.0.0.1Broadcast message: 0/1/PrepareRequest/9000
+/127.0.0.1Broadcast message: 0/1/AcceptRequest/9001
+/127.0.0.1Broadcast message: 0/1/AcceptRequest/9000
+/127.0.0.1Broadcast message: 1/2/AcceptRequest/9002
+/127.0.0.1Broadcast message: 0/1/Decision/9003
+/127.0.0.1Broadcast message: 0/1/Decision/9001
+/127.0.0.1Broadcast message: 0/1/Decision/9004
+/127.0.0.1Broadcast message: 0/1/Decision/9005
+/127.0.0.1Broadcast message: 0/1/Decision/9006
+/127.0.0.1Broadcast message: 0/1/Decision/9007
+/127.0.0.1Broadcast message: 0/1/Decision/9003
+/127.0.0.1Broadcast message: 0/1/Decision/9001
+/127.0.0.1Broadcast message: 0/1/Decision/9005
+/127.0.0.1Broadcast message: 0/1/Decision/9006
+/127.0.0.1Broadcast message: 0/1/Decision/9004
+/127.0.0.1Broadcast message: 0/1/Decision/9008
+/127.0.0.1Broadcast message: 0/1/Decision/9007
+/127.0.0.1Broadcast message: 1/2/Decision/9003
+/127.0.0.1Broadcast message: 1/2/Decision/9004
+/127.0.0.1Broadcast message: 0/1/Decision/9008
+/127.0.0.1Broadcast message: 1/2/Decision/9005
+/127.0.0.1Broadcast message: 1/2/Decision/9006
+/127.0.0.1Broadcast message: 1/2/Decision/9001
+/127.0.0.1Broadcast message: 1/2/Decision/9007
+/127.0.0.1Broadcast message: 1/2/Decision/9008
+/127.0.0.1Broadcast message: 0/1/Decision/9000
+/127.0.0.1Broadcast message: 0/1/Decision/9002
+/127.0.0.1Broadcast message: 0/1/Decision/9000
+/127.0.0.1Broadcast message: 1/2/Decision/9000
+/127.0.0.1Broadcast message: 0/1/Decision/9002
+/127.0.0.1Broadcast message: 1/2/Decision/9002
+PaxosBroadcastServer started on port 10000
+/127.0.0.1Broadcast message: 0/1/PrepareRequest/9000
+/127.0.0.1Broadcast message: 0/1/AcceptRequest/9000
+/127.0.0.1Broadcast message: 0/1/Decision/9001
+/127.0.0.1Broadcast message: 0/1/Decision/9000
+/127.0.0.1Broadcast message: 0/1/Decision/9002
+/127.0.0.1Broadcast message: 0/1/PrepareRequest/9000
+/127.0.0.1Broadcast message: 1/2/PrepareRequest/9001
+/127.0.0.1Broadcast message: 2/3/PrepareRequest/9002
+/127.0.0.1Broadcast message: 0/1/AcceptRequest/9001
+/127.0.0.1Broadcast message: 1/2/AcceptRequest/9002
+/127.0.0.1Broadcast message: 1/2/Decision/9000
+/127.0.0.1Broadcast message: 0/1/Decision/9002
+/127.0.0.1Broadcast message: 0/1/Decision/9001
+/127.0.0.1Broadcast message: 0/1/Decision/9000
+/127.0.0.1Broadcast message: 1/2/Decision/9002
+/127.0.0.1Broadcast message: 1/2/Decision/9001
+PaxosBroadcastServer started on port 10000
+/127.0.0.1Broadcast message: 1/2/PrepareRequest/9001
+/127.0.0.1Broadcast message: 0/1/PrepareRequest/9000
+/127.0.0.1Broadcast message: 2/3/PrepareRequest/9002
+/127.0.0.1Broadcast message: 1/2/AcceptRequest/9002
+/127.0.0.1Broadcast message: 1/2/AcceptRequest/9001
+/127.0.0.1Broadcast message: 1/2/Decision/9000
+/127.0.0.1Broadcast message: 1/2/Decision/9000
+/127.0.0.1Broadcast message: 1/2/Decision/9001
+/127.0.0.1Broadcast message: 1/2/Decision/9004
+/127.0.0.1Broadcast message: 1/2/Decision/9003
+/127.0.0.1Broadcast message: 1/2/Decision/9005
+/127.0.0.1Broadcast message: 1/2/Decision/9001
+/127.0.0.1Broadcast message: 1/2/Decision/9006
+/127.0.0.1Broadcast message: 1/2/Decision/9007
+/127.0.0.1Broadcast message: 1/2/Decision/9008
+/127.0.0.1Broadcast message: 1/2/Decision/9002
+/127.0.0.1Broadcast message: 1/2/Decision/9003
+/127.0.0.1Broadcast message: 1/2/Decision/9004
+/127.0.0.1Broadcast message: 1/2/Decision/9005
+/127.0.0.1Broadcast message: 1/2/Decision/9006
+/127.0.0.1Broadcast message: 1/2/Decision/9007
+/127.0.0.1Broadcast message: 1/2/Decision/9008
+/127.0.0.1Broadcast message: 1/2/Decision/9002

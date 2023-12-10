@@ -3,22 +3,18 @@ import java.net.*;
 import java.util.*;
 
 public class PaxosBroadcastServer {
+    public static int MAX_MEMBER_COUNT;
     private List<Integer> ports;
     private int port;
 
     /**
      * @param port the port number to listen on
      */
-    public PaxosBroadcastServer(int port) {
+    public PaxosBroadcastServer(int port, List<Integer> ports) {
         this.port = port;
-        this.ports = new ArrayList<>();
-
-
-        //TODO: removed this test code
-        ports.add(9000);
-        ports.add(9001);
-        ports.add(9002);
-
+        this.ports = ports;
+        
+        MAX_MEMBER_COUNT = ports.size();
     }
 
 
@@ -98,7 +94,11 @@ public class PaxosBroadcastServer {
 
 
     public static void main(String[] args) {
-        PaxosBroadcastServer server = new PaxosBroadcastServer(10000);
+        List<Integer> testPorts = new ArrayList<>();
+        testPorts.add(9000);
+        testPorts.add(9001);
+        testPorts.add(9002);
+        PaxosBroadcastServer server = new PaxosBroadcastServer(10000, testPorts);
         server.startServer();    
     }
 }
